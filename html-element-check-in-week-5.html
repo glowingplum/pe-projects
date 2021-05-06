@@ -1,0 +1,101 @@
+
+<!doctype html>
+
+<!--
+	the various comment styles...
+
+	syntax (correct code for the browser to interpret the page)
+
+	formatting (visual spacing of the code for humans)
+-->
+
+
+<html lang='en'> <!-- setting the proper language -->
+
+	<head>
+		<meta charset='UTF-8'> <!-- so the document is clear on the character set -->
+
+		<!-- the basic metadata for rich sharing -->
+		<title>Document title: Element check-in</title>
+		<meta name='description' content="A description of this site...">
+		<meta property='og:image' src='meta-image.jpg'>
+
+		<style>
+			/* CSS Comment */
+			body {
+				background-color: wheat;
+				max-width: 600px;
+			}
+			h1 {
+				font-family: sans-serif;
+			}
+			p {
+				font-family: serif;
+				font-size: 16px;
+				line-height: 1.4;
+				letter-spacing: 0.02em;
+				max-width: 80ch;
+			}
+		</style>
+	</head>
+
+
+	<body>
+		<header>
+			<h1>Element check-in (week 5)</h1>
+
+			<p>Here's a recap of the elements and attributes we've covered so far. Questions? Let's talk about it!</p>
+
+			<nav> <!-- element for 'nav'igation -->
+				<a href='#'>Link one</a>
+				<a href='#section-id'>Section one</a>
+				<a href='#other-section-id'>Section two</a>
+			</nav>
+		</header>
+
+		<main> <!-- element for the "main" page content -->
+			<section id='section-id'>
+				<h2>Heading level 2</h2>
+
+				<p>Paragraph. A paragraph is <code>display: block;</code> and so are all of the headings and lists and list items. So are the header, main, section, and footer.</p>
+
+				<p>These <a href="#">Links</a>, <em>emphasised</em> text, <strong>strongly</strong> emphasised text, <mark>marked</mark>, and more gener<span>ic spans of chara</span>cters - and this code > are <code>display: inline;</code></p>
+
+				<h3>Unordered list</h3>
+
+				<ul>
+					<li>Item one</li>
+					<li>Item two</li>
+					<li>Item three</li>
+				</ul>
+			</section>
+
+			<section id='other-section-id'>
+				<article> <!-- element for "articles" -->
+					<h1>Heading level 1 for article</h1> <!-- may have their own h1 -->
+
+					<p>Paragraph.</p>
+
+					<section>
+						<h2>Ordered list</h2>
+
+						<ol>
+							<li>Item one</li>
+							<li>Item two</li>
+							<li>Item three</li>
+						</ol>
+					</section>
+				</article>
+			</section>
+		</main>
+
+		<footer>
+			<nav>
+				<a href='#top'>Top</a>
+				<a href='#section-id'>Section one</a>
+				<a href='#other-section-id'>Section two</a>
+			</nav>
+		</footer>
+	</body>
+
+</html> <!-- end of document! -->

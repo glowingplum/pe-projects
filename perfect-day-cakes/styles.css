@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Charmonman:wght@400;700&display=swap');
+
+/* 
+font-family: 'Cardo', serif;
+font-family: 'Charmonman', cursive;
+*/
+
+* {
+    content-size: border-box;
+    transition: 1s;
+    scroll-behavior: smooth;
+}
+
+picture,
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+body {
+    font-family: 'Cardo', serif;
+    line-height: 1.5;
+    background-color: #f6f5f2;
+    margin: 0;
+}
+
+p {
+    width: 98%;
+    letter-spacing: 0.05em;
+}
+
+p+p {
+    margin-top: 10px;
+}
+
+nav {
+    display: flex;
+}
+
+.nav-part-1,
+.nav-part-2 {
+    display: flex;
+    width: 100%;
+}
+
+.nav-part-1 a,
+.nav-part-2 a {
+    width: 50%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #d59b12;
+}
+
+nav a:hover {
+    background-color: #FFDF40;
+}
+
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/landing.jpg);
+    background-size: cover;
+    height: 80vh;
+    background-position: center center;
+}
+
+.logo {
+    font-size: clamp(40px, 30vw, 80px);
+    font-style: italic;
+    font-family: 'Charmonman', cursive;
+    color: #d59b12;
+    background-color: rgba(29, 30, 37, 0.9);
+    padding: 3vw;
+}
+
+span.logo-part-1 {
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+span.logo-part-2 {
+    font-size: 80%;
+    line-height: 1;
+}
+
+.inner-column {
+    width: 98%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+h2 {
+    font-family: 'Charmonman', cursive;
+    margin-bottom: 25px;
+    font-size: clamp(30px, 20vw, 60px);
+}
+
+.inner-column p {
+    max-width: 77ch;
+}
+
+.about .inner-column {
+    display: flex;
+    align-items: center;
+}
+
+.about-text {
+    width: 50%;
+    padding-right: 2%;
+    margin-bottom: 50px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.about-image {
+    width: 50%;
+}
+
+.images {
+    background-color: #18191d;
+}
+
+.images h2 {
+    color: #f6f5f2;
+}
+
+.images-column {
+    display: flex;
+    justify-content: center;
+}
+
+.images-part-1,
+.images-part-2 {
+    width: 40%;
+}
+
+input {
+  padding: 5px;
+}
+
+text-area {
+  resize: none;
+}
+
+/* why do borders mess up with the positioning? was not border-box for that?*/
+.images-part-1 picture,
+.images-part-2 picture {
+    border: clamp(5px,2vw,20px) solid #d59b12;
+}
+
+/* how to add a margin on the sides to these images? */
+.images-part-1 picture,
+.images-part-2 picture {
+    margin-bottom: 2vw;
+}
+
+.space {
+    width: 6vw;
+}
+
+.contact {
+    background: url('images/11.png');
+    /*  why this doens't work!??  
+   background: rgba(247, 246, 243, 0.8);
+*/
+
+
+}
+
+.contact .inner-column {
+    background: rgba(247, 246, 243, 0.8);
+
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.button {
+    height: 30px;
+    padding: 30px;
+}
+
+footer {
+    text-align: center;
+    background-color: #18191d;
+    color: #f6f5f2;
+    padding: 5px;
+}
+
+
+@media (max-width:500px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-part-1 a,
+    .nav-part-2 a {
+        padding: 40px;
+    }
+
+    .landing {
+        background-image: url('https://natasjasadi.com/wp-content/uploads/2019/03/IMG_2409-1.jpg');
+    }
+
+    .logo {
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+
+    .about .inner-column {
+        flex-direction: column;
+    }
+
+    .about-text {
+        width: 98%;
+    }
+
+    .about-image {
+        width: 98%;
+    }
+
+    .images-column {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images-part-1,
+    .images-part-2 {
+        width: 90%;
+    }
+
+    .space {
+      visibility: hidden; 
+    }
+
+    .form-group{
+      flex-direction: column;
+    }
+
+
+}
