@@ -41,7 +41,6 @@
 
 body {
 	background-color: #8cbcd0;
-
 }
 
 .site-header, .promo-section {
@@ -136,13 +135,8 @@ p {
 
 @media (min-width: 800px) {
 	
-	.inner-column {
-		max-width: 800px;
-	}
-
-	.landing-section .inner-column {
+.landing-section .inner-column {
 		flex-direction: row;
-		max-width: 720px;
 	}
 
 	.landing-picture, .landing-text-section {
@@ -176,10 +170,6 @@ p {
 
 @media (min-width: 1440px) {
 
-	.inner-column {
-		max-width: 1440px;
-	}
-
 	.landing-section .inner-column {
 		max-width: 1200px;
 	}
@@ -206,6 +196,20 @@ p {
 
 	.promo-image {
 		margin-right: 0;
+	}
+
+	.promo-text-section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.promo-link {
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 15px 30px;
+		background-color: rgba(0,0,0,.5);
+		border-radius: 30px;
 	}
 
 	.landing-decoration-1 {
