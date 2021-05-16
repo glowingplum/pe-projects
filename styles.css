@@ -12,6 +12,14 @@ html {
 
 body {
 	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.sublime {
+	flex-grow: 1;
+	margin-bottom: 40px;
 }
 
 .inner-column {
@@ -56,3 +64,24 @@ li {
 li + li {
 	padding-top: 5px;
 }
+
+.foot {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #1a1e23;
+	padding: 15px;
+	padding-left: 30px;
+}
+
+.return {
+	color: #76787b;
+	text-decoration: none;
+}
+
+.return:hover {
+	text-decoration: underline;
+}
+
+
+
