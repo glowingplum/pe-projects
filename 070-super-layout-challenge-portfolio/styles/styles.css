@@ -1,0 +1,286 @@
+@import 'resets.css';
+
+
+/* STRUCTURE */
+
+.main-content {
+	flex-grow: 1;
+}
+
+.inner-column {
+	width: 100%;
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 16px;
+	padding-top: clamp(25px,10vw,100px);
+	padding-bottom: clamp(25px,10vw,100px);
+}
+
+.site-header .inner-column {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0;
+}
+
+.landing-section .inner-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.landing-section, .promo-section {
+	position: relative;
+}
+
+.promo {
+	margin-bottom: 6vw;
+}
+
+
+/* BACKGROUND COLORS */
+
+body {
+	background-color: #daba54;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.site-header, .promo-section {
+	background-color: rgba(255,255,255,.5);
+}
+
+.site-footer {
+	background-color: rgba(0,0,0,.5);
+	min-height: 200px;
+}
+
+
+/* IMAGES */
+
+.logo-picture {
+	border-radius: 50%;
+	max-width: 75px;
+	margin-right: 2vw;
+}
+
+.landing-picture {
+	max-width: 75vw;
+	margin-bottom: 4vw;
+	margin-right: 2vw;
+}
+
+.promo-image {
+	max-width: 200px;
+	margin-bottom: 2vw;
+	margin-right: 2vw;
+}
+
+.promo-image img {
+	border-radius: 50%;
+	border: 4px solid rgba(0,0,0,.3);
+}
+
+.landing-decoration-1, .landing-decoration-2, .promo-decoration {
+	display: none;
+}
+
+.promo-decoration {
+	height: 300px;
+	width: 100%;
+	max-width: 300px;
+	border-radius: 50%;
+	border-top-left-radius:0;
+	overflow: hidden;
+	border: 4px solid white;
+}
+
+.promo-decoration img {
+	background-image: url('../images/tiger-photo.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	transition: 1s;
+}
+
+/* TYPOGRAPHY */
+
+html {
+	font-family: 'helvetica neue', sans-serif;
+}
+
+p {
+	line-height: 1.3;
+	max-width: 68ch;
+}
+
+.logo-text {
+	font-weight: bold;
+}
+
+.landing-text-section {
+	max-width: 75vw;
+}
+
+.landing-title {
+	font-size: clamp(30px,8vw,60px);
+	margin-bottom: 5px;
+}
+
+.landing-text {
+	font-size: 20px;
+}
+
+.promo-title {
+	font-size: clamp(20px,5vw,40px);
+	margin-bottom: 5px;
+}
+
+.promo-text {
+	margin-bottom: 1vw;
+}
+
+.promo-link {
+	font-size: 18px;
+}
+
+.footer-text, .footer-text a {
+	color: #daba54;
+	margin-bottom: 10px;
+	margin-right: 2vw;
+	font-weight: bold;
+}
+
+
+/* MEDIA BREAK POINTS*/
+
+@media (min-width: 800px) {
+	
+.landing-section .inner-column {
+		flex-direction: row;
+	}
+
+	.landing-picture, .landing-text-section {
+		max-width: 50%;
+	}
+
+	.promo {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.promo-image {
+		max-width: 250px;
+	}
+
+	.site-footer .inner-column {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+}
+
+@media (min-width: 1440px) {
+
+	.landing-section .inner-column {
+		max-width: 1200px;
+	}
+
+	.logo-picture {
+		max-width: 100px;
+	}
+
+	.logo-text {
+		font-size: 20px;
+	}
+
+	.promo-section .inner-column {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.promo {
+		flex-direction: column;
+		text-align: center;
+		width: 30%;
+	}
+
+	.promo-image {
+		margin-right: 0;
+	}
+
+	.promo-text-section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.promo-link {
+		color: white;
+		font-size: 14px;
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 12px 30px;
+		background-color: rgba(0,0,0,.5);
+		border-radius: 30px;
+		letter-spacing: .1em;
+	}
+
+	.landing-decoration-1 {
+		display: block;
+		position: absolute;
+		bottom: -40px;
+		left: 30px;
+		z-index: 1;
+		max-width: 250px;
+	}
+
+	.landing-decoration-2 {
+		display: block;
+		position: absolute;
+		bottom: 30px;
+		right: 5%;
+		z-index: 1;
+		max-width: 450px;
+	}
+
+	.promo-section:hover .promo-decoration img {
+		background-image: url('../images/tiger-illustration.png');
+		transition: 4s;
+	}
+
+	.promo-decoration {
+		display: inline-block;
+		position: absolute;
+		right: 25px;
+		bottom: -150px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
