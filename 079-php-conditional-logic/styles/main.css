@@ -1,0 +1,57 @@
+@import 'meyer-reset.css';
+@import 'setup.css';
+
+html {
+	background-color: #361d37;
+	font-family: sans-serif;
+}
+
+body {
+	padding: 30px;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15vh;
+	color: #361d37;
+	background: linear-gradient(#daba54, #ebad53);
+}
+
+section {
+	margin-bottom: 32px;
+}
+
+h1 {
+	font-size: 48px;
+	margin-bottom: 32px;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+
+h2 {
+	font-size: 32px;
+	margin-bottom: 16px;
+	font-weight: bold;
+}
+
+p {
+	margin-bottom: 8px;
+	max-width: 60ch;
+	font-size: 16px;
+}
+
+p a {
+	color: #774e8f;
+}
+
+.formula {
+	border: 1px solid #361d37;
+	padding: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	max-width: 20ch;
+}
+
+.time {
+	text-decoration: line-through;
+}
