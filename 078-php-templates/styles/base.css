@@ -1,0 +1,28 @@
+@import 'meyer-reset.css';
+@import 'setup.css';
+
+html {
+	background-color: wheat;
+}
+
+body {
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20vh;
+	padding: 30px;
+	background-color: white;
+	color: darkblue;
+	box-shadow: 10px 10px 0 black;
+	border: 2px solid black;
+}
+
+h1, picture {
+	margin-bottom: 20px;
+}
+
+p {
+	max-width: 58ch;
+	line-height: 1.5em;
+	margin-top: 10px;
+}
