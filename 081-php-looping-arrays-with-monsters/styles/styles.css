@@ -1,0 +1,16 @@
+@import 'meyer-reset.css';
+@import 'setup.css';
+
+body {
+	padding: 30px;
+	font-family: sans-serif;
+}
+
+h2 {
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+li.monster {
+	margin-bottom: 25px;
+}
