@@ -1,0 +1,291 @@
+@import 'meyer-reset.css';
+@import 'setup.css';
+
+
+/* STRUCTURE */
+
+inner-column {
+	display: block;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1220px;
+	padding: 10px;
+	border: 3px solid black;
+}
+
+
+/* TYPOGRAPHY */
+
+* {
+	font-family: sans-serif;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
+h3 {
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+
+h1, h2, h3, p {
+	border: 3px solid black;
+	padding: 10px;
+}
+
+
+/* COMMON ELEMENTS */
+
+nav a {
+	display: block;
+	padding: 10px;
+	border: 3px solid black;
+	color: blue;
+}
+
+picture {
+	padding: 10px;
+	border: 3px solid black;
+}
+
+.button {
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 15px;
+	display: inline-block;
+	margin-top: 10px;
+	letter-spacing: .1em;
+}
+
+
+/* SITEWIDE HEADER */
+
+site-head {
+	display: block;
+	background-color: #abdabd;
+}
+
+site-head inner-column {
+	display: flex;
+	flex-direction: column;
+}
+
+site-head nav {
+	padding: 10px;
+	border: 3px solid black;
+	display: flex;
+	flex-direction: row;
+}
+
+site-head nav a {
+	display: inline-block;
+}
+
+
+/* HEADER */
+
+header {
+	background-color: #acddeb;
+}
+
+header-image {
+	display: block;
+	border: 3px solid black;
+	padding: 10px;
+}
+
+header-text {
+	display: block;
+	border: 3px solid black;
+	padding: 10px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+header-text h1 {
+	margin-bottom: 25px;
+}
+
+
+/* CALL TO ACTION */
+
+call-to-action {
+	display: block;
+	background-color: #dc9cc8;
+}
+
+call-to-action inner-column {
+	padding: 50px 10px;
+}
+
+.call-two {
+	background-color: #ff9299;
+}
+
+
+/* ARTICLE GRID */
+
+article-grid {
+	display: block;
+	background-color: #fdcc9a;
+}
+
+article-grid inner-column {
+	border: none;
+	padding: 100px 10px;
+}
+
+article-intro {
+	display: block;
+	border: 3px solid black;
+	padding: 25px 10px;
+	margin-bottom: 35px;
+}
+
+article-grid ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+}
+
+article-grid li {
+	display: block;
+	border: 3px solid black;
+	padding: 25px 10px;
+}
+
+article-grid h3 {
+	margin: 25px 0;
+}
+
+
+/* FOOTER */
+
+footer {
+	background-color: #faefe3;
+}
+
+footer-intro {
+	display: block;
+}
+
+footer-intro inner-column {
+	padding: 25px 10px;
+}
+
+footer-links {
+	display: block;
+}
+
+footer-links inner-column {
+	padding: 25px 10px 100px 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+footer nav {
+	display: inline-block;
+	padding: 10px;
+	border: 3px solid black;
+}
+
+
+/* BREAKPOINTS */
+
+@media (min-width: 576px) {
+
+	site-head inner-column {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	site-head nav {
+		flex-direction: row;
+	}
+
+
+	header inner-column {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		padding: 50px 10px;
+	}
+
+	header-image {
+		max-width: 50%;
+	}
+
+
+	call-to-action inner-column {
+		padding: 100px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
