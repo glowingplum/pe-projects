@@ -20,52 +20,48 @@
 
 
 <body>
-<!-- BEFORE REFACTORING 
+
 	<?php
-
 		include('header.html');
-
 		include('monster-database.php');
+	?>
 
+	<?php
 		foreach ($monstersList as $monster) {
 
-			if ($monster[adopted] == true) {
-				
-				$monster[adopted] = "<p class='adopted'>" . "Adopted.";
+			$id = $monster[id];
+			$name = $monster[name];
+			$story = "Hi! I am " . $monster[age] . " years old. I will be happy if you feed me with&nbsp;" . $monster[favoriteFood] . " and love!";
+			$status = $monster[adopted];
 
+			if ($status == true) {		
+				$status = "<adopted>Adopted.</adopted>";
 			} else {
-
-				$monster[adopted] = "<p class='not-adopted'>" . "Looking for a family!";
-
+				$status = "<not-adopted>Looking for a family!</not-adopted>";
 			};
 
-			$story = "Hi! I am " . $monster[age] . " years old. I will be happy if you feed me with&nbsp;" . $monster[favoriteFood] . " and love!";
-
-			echo
-
-			"<li class='monster-card' id='" . $monster[id] . "'>" . 
-
-				"<picture> <img src='images/portraits/" . $monster[id] . ".jpg' alt='Portrait of " . $monster[name] . "'> </picture>" .
-
-				"<h3>" . $monster[name] . "</h3>" .
-
-				"<p class='story'>" . $story . "</p>" . 
-
-				"<status>" .
-
-				"<p>Status:</p>" . $monster[adopted] . "</p>" .
-
-				"</status>" .
-
-			 "</li>";
-
-		};
-
-		-->
-
-		include('footer.html');
-
 	?>
+
+	<li class='monster-card' id='<?=$monster[id]?>'>
+
+	<picture>
+		<img src='images/portraits/<?=$monster[id]?>.jpg' alt='Portrait of <?=$monster[name]?>'>
+	</picture>
+
+	<h3><?=$monster[name]?></h3>
+
+	<p class='story'><?=$story?></p>
+	
+	<status>
+		<p>Status:</p>
+		<?=$status?>
+	</status>
+
+ </li>
+
+<?php }; ?>
+
+	<?php include('footer.html'); ?>
 
 </body>
 </html>
