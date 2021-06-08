@@ -4,6 +4,12 @@
 
 /* STRUCTURE */
 
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
 inner-column {
 	display: block;
 	width: 100%;
@@ -140,6 +146,7 @@ call-to-action inner-column {
 /* ARTICLE GRID */
 
 article-grid {
+	flex-grow: 1;
 	display: block;
 	background-color: #fdcc9a;
 }
