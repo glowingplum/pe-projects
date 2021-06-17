@@ -1,0 +1,43 @@
+@import url('https://fonts.gstatic.com');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap');
+
+#tommylee-theme {
+	background: linear-gradient(to bottom right,#feebbf, #feebbf, #e0e9c3);
+	padding: 30px;
+	border-radius: 15px;
+}
+
+#tommylee-theme h3 {
+	font-family: 'Libre Baskerville', Serif;
+  color: #09352f;
+  font-Size: 40px;
+  font-weight: 600;
+  line-height: 1.3em;
+}
+
+#tommylee-theme p {
+  font-family: 'Nunito', Sans-Serif;
+  font-size: 20px;
+  color: #09352f;
+  line-height: 1.5em;
+  max-width: 64ch;
+  margin-top: 20px; 
+}
+
+#tommylee-theme a {
+  padding: 20px;
+  background-color: #fedc92;
+  color: #015148;
+  border: 2px solid #015148;
+  border-radius: 10px;
+  max-width: 250px;
+  text-align: center;
+  font-family: 'Nunito', Sans-Serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .1em;
+  font-weight: 600;
+  box-shadow: 5px 5px #015148;
+  margin-top: 20px;
+}
