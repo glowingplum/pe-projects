@@ -47,6 +47,8 @@
 	<p>Computers can add, multiply, divide, and <?php echo $verbOne; ?>. They can also <?php echo $verbTwo; ?> better than a human.</p>
 
 	<p>Some computers have their own <?=$PlualBodyPart?>. Other’s have a/an <?=$adjectiveOne?> screen that shows all kinds of <?=$pluralNoun?> and <?=$adjectiveTwo?> figures.</p>
+	<pre><span><</span><span>?</span><span>php</span></pre>
+
 
 </body>
 </html>
