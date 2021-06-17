@@ -1,0 +1,18 @@
+.call-to-action {
+	background-color: #ff6d2f;
+}
+
+.call-to-action inner-column {
+	padding-right: 70px;
+	padding-left: 70px;
+	padding-top: 100px;
+}
+
+@media (min-width: 576px) {
+
+	.call-to-action inner-column {
+		padding-right: 140px;
+		padding-left: 140px;	
+	}
+
+}
