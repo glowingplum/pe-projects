@@ -12,8 +12,6 @@
 	<meta property="og:title" content="Super Ultra Responsive Layout" />
 	<meta property="og:description" content="Ivy's Responsive Challenge" />
 	<meta property="og:image" content="https://peprojects.dev/alpha-1/tommylee/093-responsive-layout-two/images/default-meta.png" />
-	<meta property="og:image:width" content="1200" />
-	<meta property="og:image:height" content="630" />
 
 	<link rel="stylesheet" href="styles/main.css" type='text/css'>
 </head>
@@ -22,8 +20,7 @@
 
 <body>
 	
-
-	<site-head>
+	<header class="site-head">
 		<inner-column>
 			
 			<nav>
@@ -37,10 +34,10 @@
 			</nav>
 
 		</inner-column>
-	</site-head>
+	</header>
 
 
-	<header>
+	<header class="page-head">
 		<inner-column>
 
 			<header-image>
@@ -65,9 +62,11 @@
 	</header>
 
 
-	<call-to-action>
+<main>
+	
+	<section class="call-to-action">
 		<inner-column>
-			
+			<!-- change order -->
 			<h2>This module is a "call to action"</h2>
 
 			<p>
@@ -79,7 +78,7 @@
 		</inner-column>
 	</call-to-action>
 
-
+<!-- better to use <section class=" "> -->
 	<article-grid>
 		<inner-column>
 			
@@ -159,20 +158,20 @@
 	</article-grid>
 
 
-<call-to-action class="call-two">
-	<inner-column>
-		
-		<h2>This module is a "call to action"</h2>
+	<call-to-action class="call-two">
+		<inner-column>
+			
+			<h2>This module is a "call to action"</h2>
 
-		<p>
-			These aren't names you should memorize. We're just making them up. Sometimes things get called something so many times, that it sticks. This is a pretty common pattern.
-		</p>
+			<p>
+				These aren't names you should memorize. We're just making them up. Sometimes things get called something so many times, that it sticks. This is a pretty common pattern.
+			</p>
 
-		<a href="#" class="button">Here's the action!</a>
+			<a href="#" class="button">Here's the action!</a>
 
-	</inner-column>
-</call-to-action>
-
+		</inner-column>
+	</call-to-action>
+</main>
 
 <footer>
 

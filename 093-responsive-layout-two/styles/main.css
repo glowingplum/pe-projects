@@ -80,31 +80,31 @@ picture {
 
 /* SITEWIDE HEADER */
 
-site-head {
+.site-head {
 	display: block;
 	background-color: #abdabd;
 }
 
-site-head inner-column {
+.site-head inner-column {
 	display: flex;
 	flex-direction: column;
 }
 
-site-head nav {
+.site-head nav {
 	padding: 10px;
 	border: 3px solid black;
 	display: flex;
 	flex-direction: row;
 }
 
-site-head nav a {
+.site-head nav a {
 	display: inline-block;
 }
 
 
 /* HEADER */
 
-header {
+.page-head {
 	background-color: #acddeb;
 }
 
@@ -129,12 +129,12 @@ header-text h1 {
 
 /* CALL TO ACTION */
 
-call-to-action {
+.call-to-action {
 	display: block;
 	background-color: #dc9cc8;
 }
 
-call-to-action inner-column {
+.call-to-action inner-column {
 	padding: 50px 10px;
 }
 
@@ -216,17 +216,17 @@ footer nav {
 
 @media (min-width: 576px) {
 
-	site-head inner-column {
+	.site-head inner-column {
 		flex-direction: row;
 		justify-content: space-between;
 	}
 
-	site-head nav {
+	.site-head nav {
 		flex-direction: row;
 	}
 
 
-	header inner-column {
+	.page-head inner-column {
 		display: flex;
 		flex-direction: row-reverse;
 		align-items: center;
@@ -238,7 +238,7 @@ footer nav {
 	}
 
 
-	call-to-action inner-column {
+	.call-to-action inner-column {
 		padding: 100px;
 	}
 
