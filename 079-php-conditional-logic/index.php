@@ -106,5 +106,55 @@
 	</section>
 
 
+	<section class="tip-calculator">
+
+		<h2>Tip calculator</h2>
+
+
+		<div class="paper">
+			
+			<p>Bamboo Garden</p>
+			<p>2537 Pacific Coast Hwy</p>
+			<p>Torrance, CA 905050000</p>
+			<p>stuff...</p>
+			<div class="split">
+				<p>Pre-Tip AMT</p>
+				<label for="pre-tip">
+					$<input id="pre-tip" type="text" name="pre-tip">
+				</label>
+			</div>
+
+			<form action="" method="post">
+
+			<div class="split">
+				<p>Tip</p>
+				<label for="tip">
+					$<input id="tip" type="text" name="tip">
+				</label>
+			</div>
+
+			</form>		
+
+			<div class="split">
+				<p>Total Amount</p>
+
+				<?php 
+
+					$preTip = $_GET['pre-tip'];
+
+				?>
+				<p class="total"><?=$total?></p>
+			</div>
+				
+				<?=$PreTip?>
+
+		</div>
+
+
+
+
+	</section>
+
+
 </body>
 </html>
