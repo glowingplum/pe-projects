@@ -1,0 +1,113 @@
+@import 'meyer-reset.css';
+@import 'setup.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&family=Orbitron:wght@400;500;700&display=swap');
+
+body {
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+nav	{
+	background-color: #223134;
+	font-family: 'Orbitron', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+	letter-spacing: .2em;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+nav inner-column {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.logo svg {
+	height: 30px;
+	margin-right: 10px;
+}
+
+.logo circle {
+	fill: #00d8fe;
+}
+
+inner-column {
+	display: flex;
+	padding: 10px;
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+	flex-direction: column;
+}
+
+h1 {
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+	padding: 50px;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.product-card {
+	background-color: #e8edf0;
+	color: #8d9899;
+	padding: 20px;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: .1em;
+}
+
+.product-name {
+	color: #223134;
+	margin-top: 10px;
+}
+
+button-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 10px;
+}
+
+.button {
+	display: flex;
+	padding: 15px 20px;
+	margin-top: 10px;
+	text-decoration: none;
+	font-size: 16px;
+	min-width: clamp(100px,49%,300px);
+	align-items: center;
+	justify-content: center;
+}
+
+.atc {
+	border: 2px solid #7d8c8d;
+	color: #7d8c8d;
+}
+
+.bn {
+	background-color: #00d8fe;
+	border: 2px solid #00d8fe;
+	color: #fff;
+}
+
+
+
+
+
+
