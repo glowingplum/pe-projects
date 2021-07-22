@@ -1,0 +1,48 @@
+.site-head {
+	background: #fff;
+	color: #000;
+}
+
+.site-head inner-column {
+	padding: 10px;
+}
+
+.site-head nav, .site-head div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.site-head a {
+	text-decoration: none;
+	padding: 10px;
+	width: fit-content;
+}
+
+.logo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.logo picture {
+	width: 30px;
+	margin-right: 5px;
+}
+
+.site-head a:hover {
+	color: #ff6d2f;
+}
+
+a.logo:hover {
+	color: #000;
+}
+
+@media (min-width: 576px) {
+
+	.site-head inner-column {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Gentium+Basic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+body.car .loud-voice	{
+	font-family: 'Work Sans', sans-serif;
+	font-size: clamp(36px, 5vw, 60px);
+}
+@media (min-width: 600px) {
+	body.car .loud-voice {
+		font-weight: 600;
+	}
+}
+
+body.car .intro-voice {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 40px;
+}
+
+body.car .attention-voice {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 30px;
+}
+
+body.car .calm-voice {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+body.car .invite-voice {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: .05em;
+	line-height: 1.4;
+}
+
+
+body.coffee .loud-voice	{
+	font-family: 'Alfa Slab One', Cursive;
+	font-size: clamp(36px, 5vw, 60px);
+}
+@media (min-width: 600px) {
+	body.coffee .loud-voice {
+		font-weight: 600;
+	}
+}
+
+body.coffee .intro-voice {
+	font-family: 'Alfa Slab One', Cursive;
+	font-size: 40px;
+}
+
+body.coffee .attention-voice {
+	font-family: 'Alfa Slab One', Cursive;
+	font-size: 30px;
+}
+
+body.coffee .calm-voice {
+	font-family: 'Gentium Book Basic', Serif;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+body.coffee .invite-voice {
+	Font-Family: 'Gentium Book Basic', Serif;
+	font-size: 16px;
+	letter-spacing: .03em;
+}
+
+/* these would be scoped to section or to an article element */
+/* this is just a loose setting for now */
+p + p {
+	margin-top: 14px;
+}
+
+h1 + p {
+	margin-top: 20px;
+}
+
+h2 + p {
+	margin-top: 20px;
+}

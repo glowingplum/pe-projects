@@ -1,0 +1,21 @@
+/* SETTINGS  ("variables" in our case) */
+html body.car {
+	--black: #1c1c1c;
+	--white: #FFF;
+	--color: #dbd3ba;
+	--highlight: #f5f3ec;
+}
+
+
+html body.coffee {
+	--black: #111;
+	--white: #FFF;
+	--color: #ff6d2f;
+	--highlight: #ffe3d7;
+}
+
+/* USAGE */
+
+.thingy {
+	color:  var(--highlight); /* used as variable */
+}

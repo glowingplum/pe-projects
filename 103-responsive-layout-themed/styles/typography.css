@@ -1,0 +1,79 @@
+/* GLOBAL STYLES */
+
+h1,h2,h3,h4,h5,h6 {
+	Font-Family: 'Alfa Slab One', Cursive;
+	text-transform: capitalize;
+	margin-bottom: 10px;
+	letter-spacing: .03em;
+}
+
+h1 {
+	Font-Size: 48px;
+	margin-top: 50px;
+}
+
+h2 {
+	font-size: 32px;
+	margin-top: 30px;
+}
+
+h2.light {
+	color: #ffe3d7;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+p, p + a {
+	Font-Family: 'Gentium Book Basic', Serif;
+	Font-Size: 18px;
+	max-width: 60ch;
+	line-height: 1.5;
+}
+
+p + p {
+	margin-top: 5px;
+}
+
+
+
+/* SITE HEAD */
+
+.site-head {
+	Font-Family: 'Alfa Slab One', Cursive;
+	font-size: 14px;
+	letter-spacing: .03em;
+}
+
+.logo {
+	Font-Family: 'Alfa Slab One', Cursive;
+	font-size: 26px;
+	letter-spacing: .03em;
+}
+
+
+/* ARTICLES */
+
+.article-card {
+	text-decoration: none;
+}
+
+.article-action {
+	Font-Family: 'Alfa Slab One', Cursive;
+	text-decoration: none;
+	letter-spacing: .03em;
+}
+
+
+/* FOOTER */
+
+footer-links nav a {
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 16px;
+}
+
+footer-links nav a:hover {
+	text-decoration: underline;
+}

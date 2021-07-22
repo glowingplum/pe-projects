@@ -1,0 +1,187 @@
+
+/* RESET */
+@import 'meyer-reset.css';
+@import 'setup.css';
+/*@import 'developer-styles.css'; */
+/* comment this out! */
+
+
+/* SETTINGS */
+@import 'settings.css'; /* variables/ etc */
+
+
+/* STRUCTURE */
+@import 'structure.css';
+
+
+/* TYPOGRAPHY */
+@import 'typography.css';
+
+
+/* COMPONENTS */
+@import 'components.css';
+
+
+/* MODULES */
+@import 'modules/masthead.css';
+@import 'modules/graphic-diptych.css';
+@import 'modules/call-to-action.css';
+@import 'modules/articles-intro.css';
+@import 'modules/article-card.css';
+@import 'modules/site-map.css';
+/* should everything/nothing be in it's own file? */
+
+
+
+html {
+	background-color: var(--white);
+}
+
+
+
+
+
+
+/* SITE SECTIONS */
+.site-header {
+	/*background-color: #9ec9eb;*/
+	position: sticky;
+	top: 0;
+	/*box-shadow: 0 2px 5px 0px rgba(0,0,0,.4);*/
+}
+.site-header inner-column {
+	padding: 14px;
+}
+
+
+
+/* just to show the full-width and section seperation */
+section:nth-of-type(odd) {
+	background-color: rgba(0,0,0,.05);
+}
+
+
+
+/* OK! SITE STYLES! */
+
+body.car .site-header {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.welcome {
+  
+}
+
+body.coffee .site-header {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.welcome {
+  
+}
+
+
+/* things kinda just start grouping up... and you'll know when something should be grouped into another file - most of the time */
+
+
+.get-involved {
+  background-color:  var(--highlight);
+  background-image:  url("data:image/svg+xml,%3Csvg width='4' height='4' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.2' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+} /* interesting way to include the whole image in your CSS */
+
+.get-involved inner-column {
+	/*max-width:  700px;*/
+}
+
+.get-involved call-to-action {
+
+}
+
+
+.stuff {
+  
+}
+
+.help-us {
+  
+}
+
+.site-footer {
+	background-color: var(--color);
+	color: var(--white);
+}
+
+.site-footer .logo {
+	max-width:  60px;
+}
+
+
+
+/* toggle */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--highlight);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--black);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+input:checked + .slider {			
+  background-color: var(--highlight);
+}
+
+input:hover + .slider {
+  box-shadow: 0 0 10px var(--color);
+}
+
+input:checked + .slider:before {
+	background-color: var(--color);
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+

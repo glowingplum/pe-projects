@@ -1,0 +1,38 @@
+.articles text-wrapper h2 {
+	color: #000;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 2em;
+}
+
+.article-card {
+	display: flex;
+	flex-direction: column;
+	border: 5px solid #000;
+	border-top-left-radius: 40px;
+	padding: 60px 20px 30px;
+	box-shadow: 
+		10px 10px #ffe3d7,
+	 	5px 15px #000,
+	 	15px 5px #000,
+	 	15px 15px #000;
+}
+
+.article-card:hover {
+	box-shadow:
+		10px 10px #ff6d2f,
+	 	5px 15px #000,
+	 	15px 5px #000,
+	 	15px 15px #000;
+}
+
+.article-card:hover > .article-action {
+	color: #ff6d2f;
+}
+
+.summary {
+	flex-grow: 1;
+}

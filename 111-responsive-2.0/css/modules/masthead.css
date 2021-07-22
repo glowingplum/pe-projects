@@ -1,0 +1,68 @@
+
+mast-head {
+  display: block;
+}
+
+mast-head nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+body.car mast-head .logo {
+  max-width: 150px;
+  background-image: url(../../images/car-logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+body.coffee mast-head .logo {
+  background-image: url(../../images/logo.svg);
+  background-repeat: no-repeat; 
+  background-size: contain;
+  height: 40px;
+}
+
+body.coffee .logo picture {
+  max-width: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+body.coffee .logo picture:after {
+  content: "PE";
+  font-family: 'Alfa Slab One', Cursive;
+  width: 200px;
+  align-items: center;
+}
+
+mast-head a {
+  padding:  10px;
+  flex-shrink: 0;
+}
+
+body.car .site-menu a span:hover {
+  padding: 5px 0;
+  border-bottom: 1px solid var(--white);
+  transition: .2s;
+}
+
+
+@media (min-width: 320px) {
+  mast-head nav {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (min-width: 400px) {
+  mast-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
