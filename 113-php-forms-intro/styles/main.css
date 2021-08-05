@@ -1,2 +1,102 @@
 @import 'meyer-reset.css';
 @import 'setup.css';
+
+html {
+		font-family: sans-serif;
+	}
+
+	h2 {
+		color: darkblue;
+	}
+	
+	form {
+		max-width: 400px;
+		padding: 20px;
+	}
+
+	label, input {
+		padding: 10px;
+		display: block;
+		height: fit-content;
+	}
+
+
+	button {
+		background-color: white;
+	}
+
+	hr {
+		margin: 20px 0;
+	}
+
+	.field {
+		display: flex;
+		flex-direction: column;
+	}
+
+	/* elements can be targetted by attribute!!! */
+	[type='submit'], .field + .field {
+		margin-top: 10px;
+	}
+
+	[type='submit'] {
+		font-family: "Nunito Sans", sans-serif;
+		font-size: 16px;
+		font-weight: 800;
+		letter-spacing: .1em;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 15px 20px;
+		color: darkblue;
+		box-shadow: 3px 3px darkblue;
+		border-radius: 10px;
+		border: 2px solid darkblue;
+		text-align: center;
+		margin-top: 20px;
+		max-width: 180px;
+		width: 100%;
+		margin-left: 10px;
+	}
+
+	[type='submit']:hover {
+		transform: translate(3px, 3px);
+		box-shadow: 0 0 7px;
+		filter: brightness(1.1);
+		transition: 0.2s;
+	}
+
+	[type='submit']:active {
+		padding: 15px 25px 10px 30px;
+		transform: translate(3px, 3px);
+		border-top: 7px solid;
+		border-left: 7px solid;
+		filter: brightness(0.8);
+		box-shadow: 0 0 0;
+		background-color: rgba(0, 0, 0, .08) ;
+	}
+
+	[type='number'] {
+		max-width: 200px;
+	}
+
+	.result {
+		color: darkblue;
+		padding: 20px;
+		background-color: lightgray;
+		font-weight: bold;
+	}
+
+	flex-wrapper {
+		display: flex;
+		flex-direction: row;
+	}
+
+	flex-wrapper p {
+		margin: 0;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
+
+	.field input {
+		margin-left: 15px;
+	}

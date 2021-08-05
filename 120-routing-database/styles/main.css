@@ -1,0 +1,129 @@
+@import 'meyer-reset.css';
+@import 'setup.css';
+@import 'modules/site-header.css';
+@import 'modules/home-landing.css';
+@import 'modules/home-reviews.css';
+@import 'modules/home-categories-list.css';
+@import 'modules/home-about.css';
+@import 'modules/home-press.css';
+
+/* TYPOGRAPHY */
+
+html {
+	font-family: "Helvetica Neue", sans-serif;
+}
+
+.section-title {
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.calm-voice {
+	line-height: 1.5em;
+	max-width: 65ch;
+}
+
+.hyperlink-text {
+	color: var(--main);
+	font-style: italic;
+	text-decoration: none;
+}
+
+p + a.hyperlink-text {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+/* STRUCTURE */
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex-grow: 1;
+}
+
+inner-column {
+	display: flex;
+	padding: 48px 16px;
+	width: 100%;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+text-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* COMMON ELEMENTS */
+
+html {
+	--main: #08d8fe;
+	--dark: #223134;
+}
+
+a.button {
+	padding: 15px 40px;
+	font-weight: bold;
+	text-transform: uppercase;
+	background-color: var(--main);
+	text-decoration: none;
+	letter-spacing: .1em;
+	width: fit-content;
+	height: fit-content;
+	color: var(--dark);
+	transition: .5s;
+}
+
+a.button:hover {
+	filter: brightness(1.1);
+	transition: .5s;
+}
+
+
+/* FOOTER */
+
+footer {
+	background-color: #eee;
+}
+
+footer inner-column {
+	flex-direction: column;
+	padding-bottom: 10px;
+}
+
+footer inner-column p.calm-voice {
+	color: gray;
+}
+
+.link-wrappers {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+links-wrapper {
+	display: block;
+	margin: 10px 0;
+	margin-left: 10px;
+}
+
+links-wrapper a {
+	line-height: 1.5;
+}
+
+links-wrapper a:hover {
+	color: var(--main);
+}
+

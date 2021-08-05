@@ -1,0 +1,12 @@
+.home-about inner-column {
+	flex-direction: column;
+}
+
+
+.home-about :is( picture ) {
+	width: clamp(100px, 60vw, 480px);
+	text-align: right;
+	text-align: center;
+	align-self: flex-end;
+	margin-top: 30px;
+	}

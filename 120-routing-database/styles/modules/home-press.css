@@ -1,0 +1,20 @@
+.home-press {
+	background-color: var(--main);
+}
+
+.home-press inner-column {
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.home-press text-wrapper {
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.home-press picture {
+	max-width: 130px;
+	margin: 0 .5em;
+}

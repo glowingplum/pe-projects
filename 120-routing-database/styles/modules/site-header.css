@@ -1,0 +1,46 @@
+/* HEADER */
+
+.site-header {
+	background-color: #223134;
+}
+
+.site-header inner-column {
+	color: #fff;
+	display: flex;
+	padding: 10px;
+	justify-content: space-between;
+}
+
+.brand {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: .1em;
+}
+
+.logo {
+	max-width: 30px;
+	margin-right: 10px;
+}
+
+.site-menu {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.site-menu a {
+	text-decoration: none;
+	padding: 10px;
+}
+
+.site-menu a:hover {
+	text-decoration: underline;
+}
+
+.current-page {
+	color: var(--main);
+}
