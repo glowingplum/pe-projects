@@ -12,6 +12,10 @@
 		</inner-column>
 		</header>
 
-
+		<label class="switch">
+			<input id="toggle" class="toggle" type="checkbox">
+			<span class="slider round"></span>
+		</label>	
+	
 		<main class='page-content'>
 			<!-- STUFF -->

@@ -10,7 +10,6 @@
 
 	<nav class='site-menu'>
 
-
 		<a href='#' class="invite-voice">
 			<span>Some page</span>
 		</a>
@@ -18,17 +17,31 @@
 		<a href='#' class="invite-voice">
 			<span>"Masthead"</span>
 		</a>
-	</nav>
 
+	</nav>
 
 	<nav class='user-menu'>
 		<a href='#' class="invite-voice">
 			<span>Sign-in</span>		
 		</a>
-		<label class="switch">
-			<input id="toggle" class="toggle" type="checkbox">
-			<span class="slider round"></span>
-		</label>	
+
 	</nav>
 
+	<button rel='toggle' class="menu-button">☰</button>
+
+	<nav class="mobile-menu">
+
+		<a class="invite-voice">MENU</a> <br>
+
+		<a href="#" class="invite-voice">Some Page</a>
+
+		<a href="#" class="invite-voice">"Masthead"</a>
+
+		<button rel='toggle' class="close-button">X</button>
+	</nav>	
+
 </mast-head>
+
+
+
+

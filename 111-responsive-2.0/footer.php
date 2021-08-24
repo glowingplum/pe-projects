@@ -19,26 +19,42 @@
 		</footer>
 
 		<script>
-					// search the compiled HTML document (document object model) DOM
-					// understand a few elements
-					var body = document.querySelector('body');
-					var toggle = document.querySelector('.toggle');
+			// search the compiled HTML document (document object model) DOM
+			// understand a few elements
+			var body = document.querySelector('body');
+			var toggle = document.querySelector('.toggle');
 
-					// define the action
-					function toggleStyles(event) {
-	 				 if (event.target.checked) {
-	 				   //alert('checked');
-	 				   body.classList.remove('car');
-	 				   body.classList.add('coffee');
-	 				 } else {
-	 				   //alert('not');
-	 				   body.classList.remove('coffee');
-	 				   body.classList.add('car');
-	 				 }
-					} 
+			// define the action
+			function toggleStyles(event) {
+				 if (event.target.checked) {
+				   //alert('checked');
+				   body.classList.remove('car');
+				   body.classList.add('coffee');
+				 } else {
+				   //alert('not');
+				   body.classList.remove('coffee');
+				   body.classList.add('car');
+				 }
+			} 
 
-					// use the action when the toggle is clicked
-					toggle.addEventListener('click', toggleStyles);
+			// use the action when the toggle is clicked
+			toggle.addEventListener('click', toggleStyles);
+
+			//adds click listener to body
+			body.addEventListener( 'click', function(event) {
+
+				//if there's click on the toggle button
+				if ( event.target.matches('[rel="toggle"]') ) {
+						body.classList.toggle('menu-open');
+				}
+
+			});
+
+			/* 
+			this style of setting the even in a larger scope 
+			and then based on what is clicked -
+			  is called "event delegation"
+			*/
 
 		</script>
 

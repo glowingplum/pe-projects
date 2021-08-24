@@ -1,15 +1,59 @@
 
 mast-head {
   display: block;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-mast-head nav {
+.mobile-menu {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: translate(0,-100vh);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-right: 20px;
+  padding-top: 20px;
+  transition: .2s;
+}
+
+body.menu-open .mobile-menu {
+  /* how the menu should behave visually when open */
+  opacity: 1;
+  pointer-events: initial; 
+  position: fixed;
+
+  transform: translate(0,0);
+  transition: .2s;
+}
+
+body.car.menu-open .mobile-menu {
+  background-color: var(--black);
+}
+
+body.coffee.menu-open .mobile-menu {
+  background-color: var(--white);
+}
+
+mast-head .site-menu {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  display: none;
+  flex-direction: row;
+  align-items: center;
 }
 
-body.car mast-head .logo {
+body.car mast-head .logo picture {
+  width: 100%;
   max-width: 150px;
   background-image: url(../../images/car-logo.png);
   background-repeat: no-repeat;
@@ -17,11 +61,15 @@ body.car mast-head .logo {
   background-position: center;
 }
 
-body.coffee mast-head .logo {
+body.coffee mast-head .logo picture {
   background-image: url(../../images/logo.svg);
   background-repeat: no-repeat; 
   background-size: contain;
   height: 40px;
+}
+
+.logo {
+  flex-grow: 1;
 }
 
 body.coffee .logo picture {
@@ -49,9 +97,53 @@ body.car .site-menu a span:hover {
   transition: .2s;
 }
 
+.user-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-open .user-menu {
+  z-index: -1;
+}
+
+.menu-button, .close-button {
+  background-color: inherit;
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+}
+
+.close-button {
+  margin-top: 10px;
+}
+
+body.car .menu-button {
+  border: 2px solid white;
+  color: white;
+}
+
+body.car .close-button {
+  color: white;
+  border: none;
+}
+
+body.coffee .menu-button {
+  border: 2px solid var(--black);
+  color: var(--black);
+}
+
+body.coffee .close-button {
+  color: var(--black);
+  border: none;
+}
+
+
+
 
 @media (min-width: 320px) {
-  mast-head nav {
+  mast-head .site-menu {
+    display: none;
     flex-direction: row;
     align-items: center;
   }
@@ -64,5 +156,15 @@ body.car .site-menu a span:hover {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 500px) {
+  .menu-button {
+    display: none;
+  }
+
+  mast-head .site-menu {
+    display: flex;
   }
 }
