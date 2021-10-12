@@ -1,0 +1,28 @@
+/* STRUCTURE: site-wide settings */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+inner-column {
+    display: flex;
+    max-width: var(--max-width);
+    height: 100%;
+    padding: calc(var(--space) * 7) var(--space);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media (min-width: 799px) {
+    
+    inner-column {
+        padding: calc(var(--space) * 14) var(--space);
+    }
+}

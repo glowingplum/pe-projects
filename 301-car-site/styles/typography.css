@@ -1,0 +1,120 @@
+/* TYPOGRAPHY */
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Newsreader:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+.strong-voice {
+    font-size: clamp(1.4rem, 1rem + 4vw, 64px);
+    line-height: 1.5;
+}
+
+.attention-voice {
+    font-size: clamp(1.3rem, 1rem + 3vw, 48px);
+    line-height: 1.5;
+}
+
+.attention-voice::after {
+    display: block;
+    content: "";
+    border-bottom: 4px solid;
+    width: 20%;
+    height: 4px;
+    margin-bottom: var(--space);
+}
+
+@media (min-width: 600px) {
+    .attention-voice::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.focus-voice {
+    font-size: clamp(1.2rem, 1rem + 2vw, 32px);
+    line-height: 1.5;
+}
+
+.introduction-voice {
+    font-family: 'Open Sans', sans-serif;
+    font-size: clamp(1.1rem, 1rem + 1vw, 24px);
+    line-height: 2;
+    max-width: 60ch;
+}
+
+.regular-voice {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 60ch;
+}
+
+.link-voice {
+    font-size: 1rem;
+    transition: .3s;
+    text-decoration: none;
+    width: fit-content;
+}
+
+
+body.light .link-voice.colored-link {
+    color: var(--red);
+    border-bottom-color: var(--red);
+}
+
+body.dark .link-voice.colored-link {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+}
+
+body.light .link-voice:hover, body.dark .link-voice:hover {
+    border-bottom: 2px solid transparent;
+    transition: .3s;
+}
+
+
+/* LIGHT THEME */
+
+body.light {
+    color: var(--black);
+}
+
+body.light .strong-voice {
+    font-family:'Krona One', sans-serif;
+}
+
+body.light .attention-voice {
+    font-family:'Krona One', sans-serif;
+}
+
+body.light .focus-voice {
+    font-family:'Krona One', sans-serif;
+}
+
+body.light .link-voice {
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 2px solid var(--black);
+}
+
+
+/* DARK THEME */
+
+body.dark {
+    color: var(--white);
+}
+
+body.dark .strong-voice {
+    font-family:'Newsreader', serif;
+}
+
+body.dark .attention-voice {
+    font-family:'Newsreader', serif;
+}
+
+body.dark .focus-voice {
+    font-family:'Newsreader', serif;
+}
+
+body.dark .link-voice {
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 2px solid var(--white);
+}

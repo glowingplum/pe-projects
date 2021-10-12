@@ -1,25 +1,93 @@
-<!doctype html>
-<html lang="en">
+<?php include('modules/head.php') ?>
+
+<label class="switch">
+	<input id="toggle" class="toggle" type="checkbox">
+	<span class="slider round"></span>
+</label>	
+
+<header class="site-header">
+	<inner-column>
+		<?php include('modules/header.php') ?>
+	</inner-column>
+</header>
+
+<main>
+
+	<section class="landing">
+		<inner-column>
+			<?php include('modules/landing.php') ?>
+		</inner-column>
+	</section>
+
+	<section class="cta">
+		<inner-column>
+			<?php 
+			$heading = "This module is a call-to-action";
+			include('modules/call-to-action.php') ?>
+		</inner-column>
+	</section>
+
+	<section class="articles">
+		<inner-column>
+			<?php include('modules/articles.php') ?>
+		</inner-column>
+	</section>
+
+	<section class="bottom-cta">
+		<inner-column>
+			<?php include('modules/call-to-action.php') ?>
+		</inner-column>
+	</section>
+
+</main>
+
+<footer>
+    <inner-column>
+		<?php include('modules/footer.php') ?>
+    </inner-column>
+</footer>
 
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>[[insert title]]</title>
-	<meta name="description" content="[[insert description]]">
+<script>
+	// search the compiled HTML document (document object model) DOM
+	// understand a few elements
+	var body = document.querySelector('body');
+	var toggle = document.querySelector('.toggle');
 
-	<meta property="og:title" content="[[insert title]]" />
-	<meta property="og:description" content="[[insert description]]" />
-	<meta property="og:image" content="[[meta image source]]" />
-	<meta property="og:image:width" content="1200" />
-	<meta property="og:image:height" content="630" />
+	// define the action
+	function toggleStyles(event) {
+			if (event.target.checked) {
+			//alert('checked');
+			body.classList.remove('light');
+			body.classList.add('dark');
+			} else {
+			//alert('not');
+			body.classList.remove('dark');
+			body.classList.add('light');
+			}
+	} 
 
-	<link rel="stylesheet" href="styles/main.css" type='text/css'>
-</head>
+	// use the action when the toggle is clicked
+	toggle.addEventListener('click', toggleStyles);
 
+	//adds click listener to body
+	body.addEventListener( 'click', function(event) {
 
-<body>
-	hellloooo
+		//if there's click on the toggle button
+		if ( event.target.matches('[rel="toggle"]') ) {
+				body.classList.toggle('menu-open');
+		}
+
+	});
+
+	/* 
+	this style of setting the even in a larger scope 
+	and then based on what is clicked -
+		is called "event delegation"
+	*/
+
+</script>
+
 </body>
 </html>

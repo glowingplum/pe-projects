@@ -1,0 +1,36 @@
+/* SETTINGS: sizes, units, colors */
+
+/* SIZES */
+
+html {
+    --max-width: 1200px;
+}
+
+
+/* Units */
+html {
+    --space: 10px;
+    --r-space: 1rem;
+}
+
+
+/* COLORS */
+
+html {
+    --black: #1a1a1a;
+    --white: #f5f5f5;
+    --red: #c1272d;
+    --gold:  #dfdb9b;
+    --light-red: #F2D3D5;
+    --dark-gold: #42412E;
+}
+
+body.light {
+    --gray: #eee;
+    --slider-shadow: var(--red);
+}
+
+body.dark {
+    --gray: #2d2d2d;
+    --slider-shadow: var(--gold);
+}
