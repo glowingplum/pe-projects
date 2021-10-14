@@ -11,7 +11,7 @@ header-content, landing-content, call-to-action, articles-content, footer-conten
 }
 
 @media (min-width: 600px) {
-    header-content, landing-content, call-to-action, footer-content {
+    header-content, footer-content {
         align-items: center;
         text-align: center;
     }
@@ -19,6 +19,15 @@ header-content, landing-content, call-to-action, articles-content, footer-conten
 
 
 /* SITE-HEADER */
+
+.site-header inner-column {
+    padding: var(--space);
+}
+
+.site-header nav {
+    display: flex;
+    gap: calc(var(--space) / 2);
+}
 
 header-content {
     width: 100%;
@@ -39,12 +48,31 @@ header-content .link-voice {
     background-position: center;
 }
 
+@media (min-width: 600px) {
+    header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1000px) {
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+}
+
 body.light .logo {
     background-image: url('../images/logo-light.png');
 }
 
 body.dark .logo {
     background-image: url('../images/logo-dark.png');
+}
+
+body.light .site-header {
+    background: #fff;
 }
 
 body.light .site-header .link-voice {
@@ -64,25 +92,6 @@ body.dark header-content .link-voice:hover {
 }
 
 
-@media (min-width: 600px) {
-    header-content {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-
-
-/* HEADER */
-
-.site-header inner-column {
-    padding: var(--space);
-}
-
-.site-header nav {
-    display: flex;
-    gap: calc(var(--space) / 2);
-}
 
 
 /* LANDING */
@@ -90,52 +99,66 @@ body.dark header-content .link-voice:hover {
 .landing {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
     height: 80vh;
+    background-blend-mode: multiply;
 }
 
 landing-content {
     display: flex;
     justify-content: space-between;
+    color: #fff;
 }
 
-landing-content > * {
-    color: var(--white);
-    text-shadow: 0 0 10px black;
+@media (min-width: 800px) {
+    landing-content {
+        max-width: 55%;
+        margin-left: 0;
+    }
 }
 
 body.light .landing {
     background-image: url('../images/landing.jpg');
+    background-color: rgba(0,0,0,.2);
+    background-position: 35% 0;
 }
 
 body.dark .landing {
     background-image: url('../images/landing-dark.jpg');
+    background-color: rgba(0,0,0,.2);
+    background-position: left;
 }
 
 
 /* CALL TO ACTION */
 
-body .cta {
+.cta {
+    color: var(--white);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(0,0,0,.5);
 }
 
 call-to-action .button {
-    margin-top: var(--space);
+    margin-top: calc(var(--space)*2);
+}
+
+@media (min-width: 800px) {
+    call-to-action {
+        max-width: 55%;
+        margin-right: 0;
+    }
 }
 
 body.light .cta {
-    background-color: var(--white);
-    background-image:  repeating-linear-gradient(45deg, var(--light-red) 25%, transparent 25%, transparent 75%, var(--light-red) 75%, var(--light-red)), repeating-linear-gradient(45deg, var(--light-red) 25%, var(--white) 25%, var(--white) 75%, var(--light-red) 75%, var(--light-red));
-    background-position: 0 0, 200px 200px;
-    background-size: 400px 400px;
-    background-attachment: fixed;
+    background-image: url('../images/cta-light.jpg');
+
 }
 
 body.dark .cta {
-    background-color: var(--black);
-    opacity: 1;
-    background-size: 200px 200px;
-    background-image: repeating-linear-gradient(45deg, var(--dark-gold) 0, var(--dark-gold) 2px, var(--black) 0, var(--black) 50%);
-    background-attachment: fixed;
+    background-image: url('../images/cta-dark.jpg');
 }
 
 
@@ -145,34 +168,52 @@ body.dark .cta {
 articles-content .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    margin-top: calc(2 * var(--space));
-    gap: calc(2 * var(--space));
+    margin-top: calc(6 * var(--space));
+    gap: calc(1 * var(--space));
 }
 
-article-card {
+.article-card {
     display: flex;
     flex-direction: column;
-    padding: calc(2 * var(--space));
+    padding: calc(4 * var(--space)) calc(2 * var(--space));
     gap: var(--space);
     background-color: var(--gray);
     min-height: fit-content;
+    text-decoration: none;
+    transition: .2s;
 }
 
-article-card .regular-voice {
+.article-card:hover {
+    transition: .2s;
+    border: calc( 1 * var(--space) ) solid;
+}
+
+.article-card .regular-voice {
     flex-grow: 1;
 }
 
-article-card img {
-    border-radius: 5px;
+.article-card .link-voice {
+    align-self: flex-end;
+}
+
+.article-card img {
     aspect-ratio: 3/2;
 }
 
 @media (min-width: 600px) {
-    articles-content header, articles-content header .introduction-voice {
+    articles-content header, articles-content header .introduction-voice, articles-content .attention-voice::after {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+body.light .article-card:hover {
+    border-color: var(--red);
+}
+
+body.dark .article-card:hover {
+    border-color: var(--gold);
 }
 
 
@@ -184,29 +225,29 @@ article-card img {
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: var(--white);
-    text-shadow: 0 0 10px black;
     background-blend-mode: multiply;
+    background-color: black;
+}
+
+.bottom-cta .introduction-voice {
+    text-shadow: 0 0 10px #000;
 }
 
 body.light .bottom-cta {
     background-image: url('../images/bottom-cta-light.jpg');
-    background-color: var(--red);
+    background-color: var(--dark-red);
 }
 
 body.dark .bottom-cta {
     background-image: url('../images/bottom-cta-dark.jpg');
-    background-color: var(--gold);
-    
+    background-color: var(--dark-gold);
 }
-
 
 
 /* FOOTER */
 
-
-
 .footer-links {
-    margin-top: calc(2 * var(--space));
+    margin-top: calc(6 * var(--space));
     display: flex;
     flex-direction: column;
     gap: var(--space);
@@ -214,7 +255,7 @@ body.dark .bottom-cta {
 }
 
 .footer-links .link-voice {
-    margin-top: var(--space);
+    margin-top: calc( 1.5 * var(--space) );
 }
 
 footer-content .footer-links .link-voice {
@@ -231,6 +272,11 @@ body.dark .footer-links .link-voice:hover {
 
 
 @media (min-width: 600px) {
+
+    footer inner-column {
+        padding-top: calc(var(--space)*12);
+        padding-bottom: calc(var(--space)*12);
+    }
     .footer-links {
         flex-direction: row;
         justify-content: space-between;

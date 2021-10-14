@@ -1,6 +1,6 @@
 <footer-content>
     <header>
-        <h3 class="focus-voice">This is the site footer and it has a "site-map" module in&nbsp;it.</h3>
+        <h3 class="introduction-voice">This is the site footer and it has a "site-map" module in&nbsp;it.</h3>
         <p class="regular-voice">Pretty standard type of thing, right?</p>
     </header>
     <section class="footer-links">

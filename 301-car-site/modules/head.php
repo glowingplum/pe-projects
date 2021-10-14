@@ -19,4 +19,4 @@
 </head>
 
 
-<body class="dark">
+<body class="light">

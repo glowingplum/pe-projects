@@ -12,17 +12,13 @@
     <?php include('articles-data.php');
 
     foreach ($article_data as $article) { ?>
-
-        <article-card>
+        <a href="#" class="article-card">
             <h3 class="focus-voice"><?=$article['heading']?></h3>
             <p class="regular-voice"><?=$article['introduction']?></p>
             <picture>
                 <img src="<?=$article['image']?>" alt="">
             </picture>
-            <a href="#" class="link-voice colored-link">
-                <span>Read More</span>
-            </a>
-        </article-card>
+        </a>
 
     <?php } ?>
 

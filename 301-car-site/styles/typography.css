@@ -6,32 +6,30 @@
 .strong-voice {
     font-size: clamp(1.4rem, 1rem + 4vw, 64px);
     line-height: 1.5;
+    letter-spacing: .05em;
+    text-transform: capitalize;
 }
 
 .attention-voice {
     font-size: clamp(1.3rem, 1rem + 3vw, 48px);
     line-height: 1.5;
+    text-transform: capitalize;
 }
 
 .attention-voice::after {
     display: block;
     content: "";
-    border-bottom: 4px solid;
-    width: 20%;
+    border-bottom: 3.5px solid;
+    width: 40%;
     height: 4px;
-    margin-bottom: var(--space);
-}
-
-@media (min-width: 600px) {
-    .attention-voice::after {
-        margin-left: auto;
-        margin-right: auto;
-    }
+    margin-top: calc(var(--space)*1);
+    margin-bottom: calc(var(--space)*2);
 }
 
 .focus-voice {
     font-size: clamp(1.2rem, 1rem + 2vw, 32px);
     line-height: 1.5;
+    text-transform: capitalize;
 }
 
 .introduction-voice {
