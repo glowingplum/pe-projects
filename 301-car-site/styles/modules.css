@@ -22,11 +22,12 @@ header-content, landing-content, call-to-action, articles-content, footer-conten
 
 .site-header inner-column {
     padding: var(--space);
+    max-width: var(--max-width-2);
 }
 
 .site-header nav {
     display: flex;
-    gap: calc(var(--space) / 2);
+    gap: calc(var(--space) * 2);
 }
 
 header-content {
@@ -117,18 +118,22 @@ landing-content {
     }
 
     body.light landing-content {
-        justify-content: space-around;
+        justify-content: space-between;
         margin-left: 0;
         margin-top: calc( var(--space) * 10 );
     }
 
     body.light landing-content > * {
-        padding: var(--space);
+        padding: calc(var(--space)*2);
+        max-width: 70%;
     }
 
     body.light landing-content .introduction-voice {
-        background-color: rgba(255,255,255,1);
-        width: 40%;
+        background-color: rgba(255,255,255,0.7);  
+    }
+
+    body.light landing-content .strong-voice {
+        margin-bottom: 30vh;
     }
 }
 
@@ -274,12 +279,28 @@ body.dark .bottom-cta {
 
 /* FOOTER */
 
+footer inner-column {
+    padding-bottom: calc(var(--space)*4);
+}
+
 .footer-links {
     margin-top: calc(6 * var(--space));
     display: flex;
     flex-direction: column;
     gap: var(--space);
     width: 100%;
+}
+
+.footer-links nav:last-of-type {
+    display: flex;
+    min-width: 100%;
+    flex-direction: row;
+    gap: calc(var(--space)*2);
+    flex-wrap: wrap;
+}
+
+.footer-links nav:last-of-type a {
+    font-size: .8rem;
 }
 
 .footer-links .link-voice {
@@ -302,16 +323,21 @@ body.dark .footer-links .link-voice:hover {
 @media (min-width: 600px) {
 
     footer inner-column {
-        padding-top: calc(var(--space)*12);
-        padding-bottom: calc(var(--space)*12);
+        padding-top: calc(var(--space)*10);
+        padding-bottom: calc(var(--space)*5);
     }
     .footer-links {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
     }
 
     footer-content .regular-voice {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .footer-links nav:last-of-type {
+        justify-content: center;
     }
 }

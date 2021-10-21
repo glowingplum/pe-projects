@@ -4,6 +4,7 @@
         <p class="regular-voice">Pretty standard type of thing, right?</p>
     </header>
     <section class="footer-links">
+        
         <nav>
             <a href="#" class="logo"></a>
             <a href="#" class="link-voice">Some page</a>
@@ -15,15 +16,16 @@
         </nav>
 
         <nav>
-            <a href="#" class="link-voice">Legal thing a</a>
-            <a href="#" class="link-voice">Legal thing b</a>
+            <a href="#" class="link-voice">Facebook</a>
+            <a href="#" class="link-voice">Instagram</a>
+            <a href="#" class="link-voice">Youtube</a>
+            <a href="#" class="link-voice">Twitter</a>
         </nav>
 
         <nav>
-            <a href="#" class="link-voice">Social thing a</a>
-            <a href="#" class="link-voice">Social thing b</a>
-            <a href="#" class="link-voice">Social thing c</a>
-            <a href="#" class="link-voice">Social thing d</a>
+            <a href="#" class="link-voice">Legal thing</a>
+            <a href="#" class="link-voice">Another legal thing</a>
         </nav>
+
     </section>
 </footer-content>

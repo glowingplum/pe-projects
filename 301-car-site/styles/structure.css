@@ -19,10 +19,6 @@ inner-column {
     margin-right: auto;
 }
 
-.site-header inner-column, footer inner-column {
-    max-width: var(--max-width-2);
-}
-
 
 @media (min-width: 799px) {
     
