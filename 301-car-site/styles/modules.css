@@ -34,8 +34,6 @@ header-content {
 }
 
 header-content .link-voice {
-    font-weight: bold;
-    font-size: 1rem;
     padding: .3rem;
     align-self: center;
 }
@@ -102,28 +100,41 @@ body.dark header-content .link-voice:hover {
 
 .landing {
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 80vh;
-    background-blend-mode: multiply;
+    background-size: contain;
 }
 
 landing-content {
     display: flex;
-    justify-content: space-between;
-    color: #fff;
+    justify-content: flex-end;
+    margin-top: 40vw;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
+    .landing inner-column {
+        padding-top: calc( var(--space) * 0 );
+        padding-bottom: calc( var(--space) * 5 );
+        min-height: 60vh;
+    }
+
     body.light landing-content {
-        max-width: 55%;
+        justify-content: space-around;
         margin-left: 0;
+        margin-top: calc( var(--space) * 10 );
+    }
+
+    body.light landing-content > * {
+        padding: var(--space);
+    }
+
+    body.light landing-content .introduction-voice {
+        background-color: rgba(255,255,255,1);
+        width: 40%;
     }
 }
 
 body.light .landing {
-    background-image: url('../images/landing.jpg');
-    background-color: rgba(0,0,0,.2);
-    background-position: 35% 0;
+    background-image: url('../images/landing-light-sm.jpg');
+    background-color: #fff;
 }
 
 body.dark .landing {
@@ -132,7 +143,13 @@ body.dark .landing {
     background-position: left;
 }
 
-
+@media (min-width: 600px) {
+    body.light .landing {
+        background-image: url('../images/landing-light-lg.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+}
 
 body.dark .landing landing-content {
     flex-direction: row;
