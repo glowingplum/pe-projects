@@ -78,6 +78,12 @@ body.dark .site-header {
     background-color: #000;
 }
 
+@media (min-width: 1000px) {
+    body.dark .site-header {
+        background-color:unset;
+    }
+}
+
 body.light .site-header .link-voice {
     border-bottom: 2px solid transparent;
 }
@@ -95,8 +101,6 @@ body.dark header-content .link-voice:hover {
 }
 
 
-
-
 /* LANDING */
 
 .landing {
@@ -108,6 +112,11 @@ landing-content {
     display: flex;
     justify-content: flex-end;
     margin-top: 40vw;
+}
+
+body.dark landing-content {
+    margin-top: 0;
+    margin-bottom: 40vw;
 }
 
 @media (min-width: 600px) {
@@ -144,8 +153,8 @@ body.light .landing {
 
 body.dark .landing {
     background-image: url('../images/landing-dark.jpg');
-    background-color: rgba(0,0,0,.2);
-    background-position: left;
+    background-color: #000;
+    background-position: bottom;
 }
 
 @media (min-width: 600px) {
@@ -154,28 +163,57 @@ body.dark .landing {
         background-size: cover;
         background-position: center;
     }
+
+    body.dark .landing {
+        min-height: 60vw;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+    }
+
+    body.dark landing-content {
+        justify-content: space-between;
+        height: 72%;
+        margin-bottom: 0;
+        align-self: center;
+    }
 }
 
-body.dark .landing landing-content {
-    flex-direction: row;
-    align-items: flex-end;
+@media (min-width: 800px) {
+    body.dark .landing inner-column {
+        margin-left: 5%;
+    }
 }
+
+@media (min-width: 1000px) {
+    body.dark .landing {
+        box-shadow: 0 0 0 180px #000;
+    }
+
+    
+}
+
 
 
 /* CALL TO ACTION */
 
 .cta {
     color: var(--white);
-    background-blend-mode: darken;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-blend-mode: multiply;
     background-attachment: fixed;
-    background-color: rgba(0,0,0,.5);
 }
 
 call-to-action .button {
     margin-top: calc(var(--space)*2);
+}
+
+@media (pointer: coarse) {
+    .cta {
+        background-attachment: scroll;
+    }
 }
 
 @media (min-width: 800px) {
@@ -187,11 +225,13 @@ call-to-action .button {
 
 body.light .cta {
     background-image: url('../images/cta-light.jpg');
-
+    background-color: rgba(0,0,0,.7);
 }
 
 body.dark .cta {
     background-image: url('../images/cta-dark.jpg');
+    background-color: rgba(0,0,0,.5);
+
 }
 
 
@@ -202,23 +242,32 @@ articles-content .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin-top: calc(6 * var(--space));
-    gap: calc(1 * var(--space));
+    gap: calc(2 * var(--space));
 }
 
 .article-card {
     display: flex;
     flex-direction: column;
-    padding: calc(4 * var(--space)) calc(2 * var(--space));
+    padding: calc(2 * var(--space)) calc(2 * var(--space));
     gap: var(--space);
     background-color: var(--gray);
     min-height: fit-content;
     text-decoration: none;
-    transition: .2s;
+    transition: .2s cubic-bezier(.15,.84,.56,.95);
+    box-shadow: inset 0 0 0 5px var(--gray);
 }
 
-.article-card:hover {
-    transition: .2s;
-    border: calc( 1 * var(--space) ) solid;
+.article-card picture {
+    overflow: hidden;
+}
+
+.article-card img {
+    transition: .2s cubic-bezier(.15,.84,.56,.95);
+}
+
+.article-card:hover img {
+    transform:  scale(1.1);
+    opacity: .8;
 }
 
 .article-card .regular-voice {
@@ -242,11 +291,11 @@ articles-content .grid {
 }
 
 body.light .article-card:hover {
-    border-color: var(--red);
+    box-shadow: inset 0 0 0 10px var(--red);
 }
 
 body.dark .article-card:hover {
-    border-color: var(--gold);
+    box-shadow: inset 0 0 0 5px var(--gold);
 }
 
 
@@ -254,12 +303,11 @@ body.dark .article-card:hover {
 
 .bottom-cta {
     background-size: cover;
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     color: var(--white);
     background-blend-mode: multiply;
-    background-color: black;
+    background-attachment: fixed;
 }
 
 .bottom-cta .introduction-voice {
@@ -274,6 +322,18 @@ body.light .bottom-cta {
 body.dark .bottom-cta {
     background-image: url('../images/bottom-cta-dark.jpg');
     background-color: var(--dark-gold);
+}
+
+@media (min-width: 800px) {
+    .bottom-cta {
+        background-position: center;
+    }
+}
+
+@media (pointer: coarse) {
+    .bottom-cta {
+        background-attachment: scroll;
+    }
 }
 
 
