@@ -9,6 +9,11 @@
  * production code, beware of the browser
  * prefixes.
  */
+@media (min-width: 600px ) {
+  .mobile-nav, .mobile-menu {
+    display: none;
+  }
+}
 
  body
  {
